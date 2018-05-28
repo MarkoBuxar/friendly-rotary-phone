@@ -16,7 +16,7 @@ npm install
 
 ## Production build
 
-Simply run `npm run serve` in the priject folder to start the server
+Simply run `npm run serve` in the project folder to start the server
 
 Your app should now be running on [localhost:3000](http://localhost:3000/).
 
