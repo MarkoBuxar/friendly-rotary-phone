@@ -1,0 +1,13 @@
+<div class="modal">
+  <div class="cancel" (click)="cancel()">
+    <img src="../../assets/close.svg" />
+  </div>
+  <div class="window">
+    <p class="title">new category</p>
+    <div class="wrap">
+      <input placeholder="name your new category" type="text" [(ngModel)]="newCatName">
+      <button [disabled]="newCatName == ''" (click)="newCategory()">{{btnText}}</button>
+    </div>
+
+  </div>
+</div>

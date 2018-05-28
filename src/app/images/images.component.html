@@ -1,0 +1,10 @@
+<div class="wrap">
+  <div class="grid container-fluid">
+    <div class="row">
+      <app-photo *ngFor="let image of images; let i = index" [image]="image" (click)="openImage(image)"></app-photo>
+      <app-newItem (click)="openModal()"></app-newItem>
+    </div>
+  </div>
+</div>
+<app-imageModal [info]="info" *ngIf="categoriesService.modal"></app-imageModal>
+<app-imageFull *ngIf="categoriesService.fullImage"></app-imageFull>

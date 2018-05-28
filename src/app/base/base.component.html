@@ -1,0 +1,14 @@
+<div class="main">
+  <div class="bg">
+    <div class="imgBlur" [ngStyle]="{'backgroundImage': categoriesService.background}">
+    </div>
+    <div class="solid"></div>
+  </div>
+  <div class="text">
+    <p class="title">fotogallery</p>
+    <p class="subtitle">{{currPage}}</p>
+    <hr>
+  </div>
+</div>
+<app-categories></app-categories>
+<app-modal *ngIf="categoriesService.modal"></app-modal>

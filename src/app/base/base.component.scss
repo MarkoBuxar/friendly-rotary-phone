@@ -1,0 +1,63 @@
+@import "./src/app/_variables";
+.main {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: $white;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  .imgBlur {
+    position: absolute;
+    width: 100%;
+    height: $bgHeight; // background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); // filter: blur(7px);
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(0.5vw);
+    transform: scale(1.03);
+    overflow: hidden;
+  }
+}
+
+.solid {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - #{$bgHeight});
+  bottom: 0;
+  background: $white;
+}
+
+.text {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  .title {
+    color: white;
+    font-size: 4vw;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    color: white;
+    font-size: 1.7vw;
+    text-transform: uppercase;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .bg {
+    .imgBlur {
+      filter: blur(3px);
+    }
+  }
+
+}

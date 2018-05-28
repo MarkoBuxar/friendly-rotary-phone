@@ -1,0 +1,14 @@
+@import "../item/item.component";
+.item {
+  justify-content: center;
+}
+
+.newGal {
+  width: 6vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .newGal {
+    width: 12vw;
+  }
+}

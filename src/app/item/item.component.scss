@@ -1,0 +1,97 @@
+@import './src/app/_variables';
+.item {
+  // width: 20vw;
+  height: $itemHeight;
+  background: $white;
+  -webkit-box-shadow: 0px 0px 0.7vw 0.2vw rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 0.7vw 0.2vw rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0.7vw 0.2vw rgba(0, 0, 0, 0.2);
+  margin-bottom: 2vw;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: $borderRadius;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transform: scale(1.0000001);
+  object-fit: contain;
+  &:hover {
+    -webkit-box-shadow: 0px 0px 1.2vw 0.5vw rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 1.2vw 0.5vw rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 1.2vw 0.5vw rgba(0, 0, 0, 0.2);
+    transform: translateY(-1vw);
+  }
+  &:hover>.info>.pocet {
+    opacity: 1;
+  }
+  &:hover>.info {
+    height: calc(#{$itemHeight} / 3);
+  }
+  &:hover>.catImg {
+    height: calc(100% - calc(#{$itemHeight} / 3));
+  }
+  .catImg {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - calc(#{$itemHeight} / 4));
+    top: 0;
+    object-fit: cover;
+    border-radius: $borderRadius $borderRadius 0px 0px;
+    transition: all 0.4s;
+  }
+  .info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: calc(#{$itemHeight} / 4);
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.4s;
+    border-radius: 0 0 $borderRadius $borderRadius;
+    color: $blue;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .name {
+    font-weight: bold;
+  }
+  .pocet {
+    opacity: 0;
+    bottom: 0;
+    transition: all 0.4s;
+    color: $grey;
+    font-size: 1.2vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .item {
+    height: $itemHeightMobile;
+    .info {
+      height: calc(#{$itemHeightMobile} / 3);
+      font-size: 4.5vw;
+    }
+    .pocet {
+      font-size: 3.3vw;
+    }
+    &:hover>.info {
+      height: calc(#{$itemHeightMobile} / 2);
+    }
+    &:hover>img {
+      height: calc(100% - calc(#{$itemHeightMobile} / 3));
+    }
+    .newGal {
+      img {
+        width: 10vw;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import './src/app/_variables';
+@import "./src/app/item/item.component";
+@import "./src/app/newItem/newItem.component";
+.newGal {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}

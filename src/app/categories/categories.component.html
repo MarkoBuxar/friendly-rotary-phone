@@ -1,0 +1,9 @@
+<div class="wrap">
+  <div class="grid container-fluid">
+    <div class="row">
+      <app-item *ngFor="let category of categories; let i = index" [category]="category" (mouseenter)="changeBg(category.image != null ?  categoriesService.api + 'images/1000x0/' + category.image.fullpath : '../../assets/default.png')"
+        (click)="redirect(i)"></app-item>
+      <app-newItem (click)="toggleModal()"></app-newItem>
+    </div>
+  </div>
+</div>

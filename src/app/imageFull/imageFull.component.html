@@ -1,0 +1,9 @@
+<div class="modal">
+  <div class="cancel" (click)="close()">
+    <img src="../../assets/close.svg" />
+  </div>
+  <div class="window">
+    <img [src]="categoriesService.api + 'images/1000x0/' + categoriesService.currImage" />
+  </div>
+  <div class="delete" (click)="delete()">{{deleteBtnText}}</div>
+</div>

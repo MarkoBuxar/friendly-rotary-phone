@@ -1,0 +1,19 @@
+<div class="modal">
+  <div class="cancel" (click)="closeModal()">
+    <img src="../../assets/close.svg" />
+  </div>
+  <div class="window">
+    <p class="title">new image</p>
+    <div class="flex">
+      <div class="uploadArea" [ngClass]="{hover: fileHover}">
+        <file-drop (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" class="dropWindow">
+          <img [src]="categoriesService.uploadStatus ? '../../assets/loading.svg' : '../../assets/img.svg'" />
+          <input type="file" id="file" (change)="upload($event)" multiple="multiple" accept=".jpg, .jpeg" />
+          <span>Drag your files here</span>
+          <span>or</span>
+          <label for="file" class="label">upload files</label>
+        </file-drop>
+      </div>
+    </div>
+  </div>
+</div>

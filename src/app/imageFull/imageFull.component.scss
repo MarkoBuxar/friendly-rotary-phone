@@ -1,0 +1,54 @@
+@import "../modal/modal.component.scss";
+.window {
+  width: 80vw !important;
+  height: 80% !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  img {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+}
+
+.cancel {
+  margin-left: calc(80vw / 1.05) !important;
+}
+
+.delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: $red;
+  color: white;
+  font-size: 1.4vw;
+  border: none;
+  cursor: pointer;
+  height: 4vw;
+  width: 10vw;
+  text-transform: uppercase;
+  outline: none;
+  transform: opacity 0.2s;
+  border-radius: 0.3vw;
+  margin-left: calc(80vw / 1.15);
+  margin-top: 1vw;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cancel {
+    margin-left: 80vw;
+    img {
+      width: 5vw !important;
+    }
+  }
+}

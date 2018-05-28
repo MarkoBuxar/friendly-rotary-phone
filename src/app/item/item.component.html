@@ -1,0 +1,6 @@
+<div class="item">
+  <img class="catImg" [src]="category.image != undefined ? categoriesService.api + 'images/600x0/' + category.image.fullpath : '../../assets/default.png'"
+  />
+  <div class="info">
+    <span class="name">{{category.name}}</span>
+  </div>

@@ -1,0 +1,6 @@
+@import "../categories/categories.component";
+@media only screen and (max-width: 600px) {
+  .grid {
+    height: calc(100% - calc(#{$bgHeight} /1.2));
+  }
+}
